@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- HTML meta refresh URL redirection (in 10 secs)-->
+<!--<meta http-equiv="refresh" content="10; url=http://bapua.weebly.com/">-->
+<!--After redirected, the original url (redirecting.html) would not be recorded in browser, back pages history-->
+<style type="text/css">
+html {
+	position: relative; 	/*Top and left properties are relative to the document*/
+	min-height: 100%;
+}
+body {
+	background: -webkit-linear-gradient(#EEE3E3 10%, #F75A5A 50%, #303030 110%); /* For Safari 5.1 to 6.0 */
+  	background: -o-linear-gradient(#EEE3E3 10%, #F75A5A 50%, #303030 110%); /* For Opera 11.1 to 12.0 */
+  	background: -moz-linear-gradient(#EEE3E3 10%, #F75A5A 50%, #303030 110%); /* For Firefox 3.6 to 15 */
+  	background: linear-gradient(#EEE3E3 10%, #F75A5A 50%, #303030 110%); /* Standard syntax */
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #FDFDFD;
+	text-align: center;
+}
+#message {
+	position: fixed;					/*<From HERE>*/
+	top: 50%;
+	left: 50%;							/*Places the top-left corner of the element at the center of the screen*/
+    margin-right: -50%;					/*Fixes the outbound scroll bar, so does the next sentence*/
+    transform: translate(-50%, -50%);	
+	-moz-transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);/*<Till HERE>*/
+	text-shadow: 3px 2px 5px #890000;
+	animation: fadein 3s;
+    -moz-animation: fadein 3s; /* Firefox */
+    -webkit-animation: fadein 3s; /* Safari and Chrome */
+    -o-animation: fadein 3s; /* Opera */
+}
+#message h1{
+	font-size: 36pt;
+	font-weight: normal;
+	margin-bottom: -0.4em;
+}
+#message h2{
+	font-size: 24pt;
+	font-weight: normal;
+}
+#logo-img {
+	margin-bottom: -0.7em;
+    animation: fadein 5s;
+    -moz-animation: fadein 5s; /* Firefox */
+    -webkit-animation: fadein 5s; /* Safari and Chrome */
+    -o-animation: fadein 5s; /* Opera */
+}
+@keyframes fadein {
+    from { opacity:0; }
+    to { opacity:1; }
+}
+@-moz-keyframes fadein { /* Firefox */
+    from { opacity:0; }
+    to { opacity:1; }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from { opacity:0; }
+    to { opacity:1; }
+}
+@-o-keyframes fadein { /* Opera */
+    from { opacity:0; }
+    to { opacity: 1; }
+}
+</style>
+<title>Beta Alpha Psi - Eta Pi Chapter</title>
+</head>
+<body>
+	<div id="message">
+		<img id ="logo-img" src="./bapLogo.png" height="500" width="500">
+		<h1>Our site is currently under construction.</h1>
+		<h2>We apologize for any inconvenience. You will be redirected to our temporary site in <span id="sec">00</span> seconds.</h2>
+	</div>
+	<script type="text/javascript">
+	(function( count, elemId ) {
+		var secElem = document.getElementById( elemId );
+		(function countdown() {
+			secElem.innerHTML = (count == 10)? count: '0' + count;		//If count is 10, print count; Else, print 0+count.
+			count--;
+			if( count >= 0 ) {
+				setTimeout( countdown, 1e3 );							//Every 1 second, run countdown function
+			}
+			//if( count == 0 ) {
+			//	count = 10;
+			//	window.location.href = "http://bapua.weebly.com/";
+			//}
+			// Uses these codes when it turns to be a welcome page.
+			// (This will leave a record in back pages history of the browser.)
+		})();			//Run function countdown()
+	})( 10, 'sec' );	//Run function( count, elemId) with the input values
+	</script>
+</body>
+</html>
